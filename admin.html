@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, button {
+            margin-top: 5px;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Admin Panel</h1>
+    <button onclick="logout()">Logout</button>
+
+    <!-- User Scores Table -->
+    <h2>User Scores</h2>
+    <table id="userScoresTable">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Scores</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- User data dynamically inserted here -->
+        </tbody>
+    </table>
+
+    <!-- Quiz Management -->
+    <h2>Manage Quiz Questions</h2>
+    <h3>Existing Questions</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Question</th>
+                <th>Options</th>
+                <th>Correct Answer</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="questionTableBody">
+            <!-- Quiz questions dynamically inserted here -->
+        </tbody>
+    </table>
+
+    <h3>Add New Question</h3>
+    <form id="addQuestionForm">
+        <label for="newQuestion">Question:</label>
+        <input type="text" id="newQuestion" placeholder="Enter the question" required />
+
+        <label for="option1">Option 1:</label>
+        <input type="text" id="option1" placeholder="Enter option 1" required />
+
+        <label for="option2">Option 2:</label>
+        <input type="text" id="option2" placeholder="Enter option 2" required />
+
+        <label for="option3">Option 3:</label>
+        <input type="text" id="option3" placeholder="Enter option 3" required />
+
+        <label for="option4">Option 4:</label>
+        <input type="text" id="option4" placeholder="Enter option 4" required />
+
+        <label for="correctAnswer">Correct Answer:</label>
+        <input type="text" id="correctAnswer" placeholder="Enter the correct answer" required />
+
+        <button type="submit">Add Question</button>
+    </form>
+
+    <!-- Link to the script.js script -->
+    <script src="script.js"></script>
+</body>
+</html>
